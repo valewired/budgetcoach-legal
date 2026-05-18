@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – BudgetCoach</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+    h1 { font-size: 2rem; margin-bottom: 0.25rem; }
+    h2 { font-size: 1.25rem; margin-top: 2rem; border-bottom: 1px solid #e5e5e5; padding-bottom: 0.4rem; }
+    .lang-toggle { display: flex; gap: 1rem; margin-bottom: 2rem; }
+    .lang-toggle button {
+      padding: 0.4rem 1.2rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      cursor: pointer;
+      background: #fff;
+      font-size: 0.95rem;
+    }
+    .lang-toggle button.active { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+    .section-it, .section-en { display: none; }
+    .section-it.visible, .section-en.visible { display: block; }
+    .updated { color: #666; font-size: 0.9rem; margin-bottom: 2rem; }
+    a { color: #0070f3; }
+    ul { padding-left: 1.5rem; }
+    li { margin-bottom: 0.3rem; }
+    hr { border: none; border-top: 2px solid #e5e5e5; margin: 3rem 0; }
+  </style>
+</head>
+<body>
+
+<h1>Privacy Policy – BudgetCoach</h1>
+
+<div class="lang-toggle">
+  <button class="active" onclick="showLang('it')">🇮🇹 Italiano</button>
+  <button onclick="showLang('en')">🇬🇧 English</button>
+</div>
+
+<!-- ==================== ITALIANO ==================== -->
+<div class="section-it visible" id="section-it">
+
+  <p class="updated">Ultimo aggiornamento: 16 maggio 2025</p>
+
+  <p>La presente Privacy Policy descrive come <strong>BudgetCoach</strong>, sviluppata da <strong>Valerio Martori</strong> (<a href="mailto:valewired@gmail.com">valewired@gmail.com</a>), raccoglie, utilizza e protegge i tuoi dati personali.</p>
+
+  <h2>1. Titolare del trattamento</h2>
+  <p>Valerio Martori<br/>Email: <a href="mailto:valewired@gmail.com">valewired@gmail.com</a></p>
+
+  <h2>2. Dati raccolti</h2>
+  <p>L'app raccoglie le seguenti categorie di dati:</p>
+  <ul>
+    <li><strong>Dati di registrazione:</strong> indirizzo email e password (gestiti tramite Supabase Auth)</li>
+    <li><strong>Dati finanziari inseriti manualmente:</strong> entrate mensili, spese fisse, spese giornaliere, obiettivi di risparmio</li>
+    <li><strong>Token di notifica push:</strong> per inviarti promemoria e riepiloghi (solo se accetti le notifiche)</li>
+    <li><strong>Fuso orario del dispositivo:</strong> per personalizzare gli orari delle notifiche</li>
+  </ul>
+  <p>Non raccogliamo dati di geolocalizzazione, contatti, foto o altri dati sensibili non elencati.</p>
+
+  <h2>3. Finalità del trattamento</h2>
+  <ul>
+    <li>Fornirti il servizio di gestione del budget personale</li>
+    <li>Calcolare il budget giornaliero disponibile e la curva di spesa</li>
+    <li>Inviarti notifiche push di promemoria e riepilogo settimanale</li>
+    <li>Fornire suggerimenti personalizzati tramite intelligenza artificiale (Groq AI)</li>
+  </ul>
+
+  <h2>4. Base giuridica</h2>
+  <p>Il trattamento si basa sul <strong>contratto</strong> (art. 6, par. 1, lett. b GDPR) per la fornitura del servizio, e sul <strong>consenso</strong> (art. 6, par. 1, lett. a GDPR) per le notifiche push.</p>
+
+  <h2>5. Minori</h2>
+  <p>L'app può essere utilizzata da utenti di qualsiasi età. Per gli utenti di età inferiore a <strong>16 anni</strong>, è richiesto il consenso del genitore o tutore legale prima di creare un account e inserire dati personali. Utilizzando l'app, dichiari di aver ottenuto tale consenso.</p>
+  <p>Se veniamo a conoscenza che dati di minori sotto i 16 anni sono stati raccolti senza consenso parentale, procederemo alla cancellazione immediata.</p>
+
+  <h2>6. Terze parti e sub-responsabili</h2>
+  <ul>
+    <li><strong>Supabase</strong> (supabase.com) — archiviazione dati e autenticazione. I dati sono conservati su server europei (UE). <a href="https://supabase.com/privacy" target="_blank">Privacy Policy Supabase</a></li>
+    <li><strong>Groq</strong> (groq.com) — elaborazione AI per i suggerimenti finanziari. I dati inviati a Groq sono anonimi e non contengono informazioni identificative. <a href="https://groq.com/privacy-policy/" target="_blank">Privacy Policy Groq</a></li>
+    <li><strong>Expo / Expo Push Notifications</strong> — invio notifiche push. <a href="https://expo.dev/privacy" target="_blank">Privacy Policy Expo</a></li>
+  </ul>
+  <p>Non vendiamo né cediamo i tuoi dati a terze parti per finalità di marketing.</p>
+
+  <h2>7. Conservazione dei dati</h2>
+  <p>I tuoi dati vengono conservati finché il tuo account è attivo. Alla cancellazione dell'account, tutti i dati personali vengono eliminati entro <strong>30 giorni</strong>.</p>
+
+  <h2>8. I tuoi diritti (GDPR)</h2>
+  <p>Hai il diritto di:</p>
+  <ul>
+    <li><strong>Accesso:</strong> richiedere una copia dei tuoi dati</li>
+    <li><strong>Rettifica:</strong> correggere dati inesatti</li>
+    <li><strong>Cancellazione:</strong> eliminare il tuo account e tutti i dati dall'app stessa (Impostazioni → Elimina account) oppure scrivendoci</li>
+    <li><strong>Portabilità:</strong> ricevere i tuoi dati in formato leggibile</li>
+    <li><strong>Opposizione:</strong> opporti al trattamento in determinate circostanze</li>
+    <li><strong>Revoca del consenso:</strong> disattivare notifiche push in qualsiasi momento dalle impostazioni del dispositivo</li>
+  </ul>
+  <p>Per esercitare i tuoi diritti scrivi a: <a href="mailto:valewired@gmail.com">valewired@gmail.com</a></p>
+  <p>Hai inoltre il diritto di presentare reclamo all'autorità di controllo competente (in Italia: <a href="https://www.garanteprivacy.it" target="_blank">Garante per la protezione dei dati personali</a>).</p>
+
+  <h2>9. Sicurezza</h2>
+  <p>I dati sono trasmessi tramite connessioni cifrate (HTTPS/TLS). L'autenticazione avviene tramite JWT token.</p>
+
+  <h2>10. Modifiche alla Privacy Policy</h2>
+  <p>Eventuali modifiche saranno pubblicate su questa pagina con aggiornamento della data in cima. Per modifiche sostanziali, ti informeremo tramite notifica in-app o email.</p>
+
+  <h2>11. Contatti</h2>
+  <p>Per qualsiasi domanda relativa alla privacy:<br/>
+  Email: <a href="mailto:valewired@gmail.com">valewired@gmail.com</a></p>
+
+</div>
+
+<!-- ==================== ENGLISH ==================== -->
+<div class="section-en" id="section-en">
+
+  <p class="updated">Last updated: May 16, 2025</p>
+
+  <p>This Privacy Policy describes how <strong>BudgetCoach</strong>, developed by <strong>Valerio Martori</strong> (<a href="mailto:valewired@gmail.com">valewired@gmail.com</a>), collects, uses, and protects your personal data.</p>
+
+  <h2>1. Data Controller</h2>
+  <p>Valerio Martori<br/>Email: <a href="mailto:valewired@gmail.com">valewired@gmail.com</a></p>
+
+  <h2>2. Data We Collect</h2>
+  <p>The app collects the following categories of data:</p>
+  <ul>
+    <li><strong>Registration data:</strong> email address and password (managed via Supabase Auth)</li>
+    <li><strong>Manually entered financial data:</strong> monthly income, fixed expenses, daily expenses, savings goals</li>
+    <li><strong>Push notification token:</strong> to send you reminders and summaries (only if you accept notifications)</li>
+    <li><strong>Device timezone:</strong> to personalize notification times</li>
+  </ul>
+  <p>We do not collect geolocation data, contacts, photos, or any other sensitive data not listed above.</p>
+
+  <h2>3. Purpose of Processing</h2>
+  <ul>
+    <li>Providing the personal budget management service</li>
+    <li>Calculating your available daily budget and spending curve</li>
+    <li>Sending push notifications for reminders and weekly summaries</li>
+    <li>Providing personalized suggestions via artificial intelligence (Groq AI)</li>
+  </ul>
+
+  <h2>4. Legal Basis</h2>
+  <p>Processing is based on the <strong>contract</strong> (Art. 6(1)(b) GDPR) for service provision, and on <strong>consent</strong> (Art. 6(1)(a) GDPR) for push notifications.</p>
+
+  <h2>5. Minors</h2>
+  <p>The app may be used by users of any age. For users under the age of <strong>16</strong>, parental or legal guardian consent is required before creating an account and entering personal data. By using the app, you confirm that such consent has been obtained.</p>
+  <p>If we become aware that data from users under 16 has been collected without parental consent, we will delete it immediately.</p>
+
+  <h2>6. Third Parties and Sub-processors</h2>
+  <ul>
+    <li><strong>Supabase</strong> (supabase.com) — data storage and authentication. Data is stored on European (EU) servers. <a href="https://supabase.com/privacy" target="_blank">Supabase Privacy Policy</a></li>
+    <li><strong>Groq</strong> (groq.com) — AI processing for financial suggestions. Data sent to Groq is anonymized and contains no personally identifiable information. <a href="https://groq.com/privacy-policy/" target="_blank">Groq Privacy Policy</a></li>
+    <li><strong>Expo / Expo Push Notifications</strong> — push notification delivery. <a href="https://expo.dev/privacy" target="_blank">Expo Privacy Policy</a></li>
+  </ul>
+  <p>We do not sell or share your data with third parties for marketing purposes.</p>
+
+  <h2>7. Data Retention</h2>
+  <p>Your data is retained for as long as your account is active. Upon account deletion, all personal data is erased within <strong>30 days</strong>.</p>
+
+  <h2>8. Your Rights (GDPR)</h2>
+  <p>You have the right to:</p>
+  <ul>
+    <li><strong>Access:</strong> request a copy of your data</li>
+    <li><strong>Rectification:</strong> correct inaccurate data</li>
+    <li><strong>Erasure:</strong> delete your account and all data from within the app (Settings → Delete account) or by contacting us</li>
+    <li><strong>Portability:</strong> receive your data in a readable format</li>
+    <li><strong>Objection:</strong> object to processing in certain circumstances</li>
+    <li><strong>Withdraw consent:</strong> disable push notifications at any time from your device settings</li>
+  </ul>
+  <p>To exercise your rights, contact us at: <a href="mailto:valewired@gmail.com">valewired@gmail.com</a></p>
+  <p>You also have the right to lodge a complaint with the competent supervisory authority (in Italy: <a href="https://www.garanteprivacy.it" target="_blank">Garante per la protezione dei dati personali</a>).</p>
+
+  <h2>9. Security</h2>
+  <p>Data is transmitted via encrypted connections (HTTPS/TLS). Authentication is handled via JWT tokens.</p>
+
+  <h2>10. Changes to This Privacy Policy</h2>
+  <p>Any changes will be published on this page with an updated date at the top. For material changes, we will notify you via in-app notification or email.</p>
+
+  <h2>11. Contact</h2>
+  <p>For any privacy-related questions:<br/>
+  Email: <a href="mailto:valewired@gmail.com">valewired@gmail.com</a></p>
+
+</div>
+
+<script>
+  function showLang(lang) {
+    document.getElementById('section-it').classList.remove('visible');
+    document.getElementById('section-en').classList.remove('visible');
+    document.getElementById('section-' + lang).classList.add('visible');
+    document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.remove('active'));
+    event.target.classList.add('active');
+  }
+</script>
+
+</body>
+</html>
