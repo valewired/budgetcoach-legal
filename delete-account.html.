@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elimina Account – BudgetCoach</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0D0D0F;
+      --bg-card:   #111118;
+      --border:    #2A2A2E;
+      --blue:      #4F6EF7;
+      --blue-light:#A8B8FF;
+      --white:     #F0F0F2;
+      --gray:      #888888;
+      --gray-dark: #555555;
+      --red:       #E24B4A;
+      --green:     #22C78A;
+      --radius-sm: 8px;
+      --radius-md: 10px;
+      --radius-lg: 14px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 48px 16px 64px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 560px;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+    .logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: #131320;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--blue);
+    }
+    .header-text h1 {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+    .header-text p {
+      font-size: 12px;
+      color: var(--gray);
+      margin-top: 2px;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--bg-card);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      margin-bottom: 12px;
+    }
+
+    .card-label {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--gray-dark);
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    /* Steps */
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 10px 0;
+      border-bottom: 0.5px solid var(--border);
+    }
+    .step:last-child { border-bottom: none; }
+
+    .step-num {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #1A1A28;
+      border: 0.5px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--blue);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .step-body strong {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 2px;
+    }
+    .step-body span {
+      font-size: 12px;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
+    /* Data table */
+    .data-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 0.5px solid var(--border);
+      gap: 12px;
+    }
+    .data-row:last-child { border-bottom: none; }
+
+    .data-name {
+      font-size: 13px;
+      color: var(--white);
+    }
+    .badge {
+      font-size: 10px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 20px;
+      flex-shrink: 0;
+    }
+    .badge-delete {
+      background: rgba(226, 75, 74, 0.15);
+      color: var(--red);
+    }
+    .badge-keep {
+      background: rgba(34, 199, 138, 0.12);
+      color: var(--green);
+    }
+
+    /* Contact box */
+    .contact-card {
+      background: rgba(79, 110, 247, 0.07);
+      border: 0.5px solid rgba(79, 110, 247, 0.3);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      margin-bottom: 12px;
+    }
+    .contact-card .card-label { color: var(--blue-light); }
+    .contact-card p {
+      font-size: 13px;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+    .contact-card a {
+      color: var(--blue-light);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .contact-card a:hover { text-decoration: underline; }
+
+    /* Warning */
+    .warning {
+      background: rgba(226, 75, 74, 0.07);
+      border: 0.5px solid rgba(226, 75, 74, 0.25);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      margin-bottom: 32px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .warning-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+    .warning p {
+      font-size: 12px;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+    .warning strong { color: var(--red); }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 11px;
+      color: var(--gray-dark);
+      line-height: 1.8;
+    }
+    footer a {
+      color: var(--gray);
+      text-decoration: none;
+    }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">B</div>
+      <div class="header-text">
+        <h1>BudgetCoach</h1>
+        <p>Eliminazione account e dati</p>
+      </div>
+    </div>
+
+    <!-- Steps -->
+    <div class="card">
+      <p class="card-label">Come eliminare l'account</p>
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <strong>Apri BudgetCoach</strong>
+          <span>Avvia l'app sul tuo dispositivo Android e accedi con il tuo account.</span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <strong>Vai alla scheda Profilo</strong>
+          <span>Tocca l'icona Profilo in basso a destra nella barra di navigazione.</span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <strong>Scorri fino in fondo</strong>
+          <span>Scorri verso il basso fino a trovare il pulsante rosso <em>Elimina Account</em>.</span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <strong>Conferma l'eliminazione</strong>
+          <span>Tocca <em>Elimina Account</em> nella finestra di conferma. L'account verrà rimosso immediatamente e verrai disconnesso.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data deleted/kept -->
+    <div class="card">
+      <p class="card-label">Dati eliminati e conservati</p>
+
+      <div class="data-row">
+        <span class="data-name">Profilo utente (nome, email)</span>
+        <span class="badge badge-delete">Eliminato</span>
+      </div>
+      <div class="data-row">
+        <span class="data-name">Spese e transazioni inserite</span>
+        <span class="badge badge-delete">Eliminato</span>
+      </div>
+      <div class="data-row">
+        <span class="data-name">Impostazioni budget e obiettivi</span>
+        <span class="badge badge-delete">Eliminato</span>
+      </div>
+      <div class="data-row">
+        <span class="data-name">Cronologia chat con AI Coach</span>
+        <span class="badge badge-delete">Eliminato</span>
+      </div>
+      <div class="data-row">
+        <span class="data-name">Preferenze di notifica</span>
+        <span class="badge badge-delete">Eliminato</span>
+      </div>
+      <div class="data-row">
+        <span class="data-name">Log di sistema anonimi (crash)</span>
+        <span class="badge badge-keep">Conservato 90 gg</span>
+      </div>
+    </div>
+
+    <!-- Alternative contact -->
+    <div class="contact-card">
+      <p class="card-label">Non riesci ad accedere all'app?</p>
+      <p>
+        Se non puoi accedere al tuo account, puoi richiedere la cancellazione via email.
+        Scrivi a <a href="mailto:valerio.martori@digitouch.it">valerio.martori@digitouch.it</a>
+        con oggetto <strong style="color: var(--white);">"Richiesta eliminazione account"</strong>
+        indicando l'indirizzo email associato al tuo account.<br><br>
+        La richiesta verrà evasa entro <strong style="color: var(--white);">30 giorni</strong>.
+      </p>
+    </div>
+
+    <!-- Warning -->
+    <div class="warning">
+      <span class="warning-icon">⚠</span>
+      <p>
+        <strong>Attenzione:</strong> l'eliminazione dell'account è irreversibile.
+        Tutti i tuoi dati verranno rimossi definitivamente e non sarà possibile recuperarli.
+      </p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>BudgetCoach &mdash; sviluppato da Valerio Martori</p>
+      <p style="margin-top: 6px;">
+        <a href="mailto:valerio.martori@digitouch.it">valerio.martori@digitouch.it</a>
+      </p>
+    </footer>
+
+  </div>
+</body>
+</html>
